@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode</title>
+    <style>
+       
+        .theme-icon{
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .active{
+            border: 1px solid black;
+        }
+        .text-heading{
+            text-align: center;
+            font-size: 60px;
+        }
+        .img{
+            width: 300px;
+            display: block;
+            margin: 1px auto;
+        }
+        .theme-dark{
+            background-color: #000;
+            color: #fff;
+        }
+        .theme-light{
+            background-color: #E0E0E0;
+            color: #000;
+        }
+    </style>
+</head>
+<body id="body">
+   <div>
+    <h1 class=>This is a Light/Dark mode theme changer</h1>
+    <img src="dark.png" class="theme-icon active" id="img-dark" onclick="darkMode()"/>
+    <img src="light.png" class="theme-icon" id="img-light" onclick="lightMode()"/>
+
+    <h2 class="text-heading"> Ganesha </h2>
+    <img src="ganesha.png" class="img"/>
+
+   </div> 
+
+   <script>
+      function darkMode(){
+        const imgDark = document.getElementById("img-dark");
+        imgDark.classList.add('active');
+
+        const imgLight = document.getElementById("img-light");
+        imgLight.classList.remove('active');
+
+        const bodyElement = document.getElementById("body");
+        bodyElement.className = "theme-dark";
+      }
+
+      function lightMode(){
+        const imgDark = document.getElementById("img-dark");
+        imgDark.classList.remove('active');
+
+        const imgLight = document.getElementById("img-light");
+        imgLight.classList.add('active');
+
+        const bodyElement = document.getElementById("body");
+        bodyElement.className = "theme-light";
+      }
+   </script>
+</body>
+</html>
