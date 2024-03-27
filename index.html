@@ -6,6 +6,11 @@
     <title>Light/Dark Mode</title>
     <style>
        
+       .cotainer{
+        width: 400px;
+        display: block;
+        margin: 20px auto;
+       }
         .theme-icon{
             height: 30px;
             width: 30px;
@@ -19,7 +24,7 @@
         }
         .text-heading{
             text-align: center;
-            font-size: 60px;
+            font-size: 40px;
         }
         .img{
             width: 300px;
@@ -37,8 +42,10 @@
     </style>
 </head>
 <body id="body">
-   <div>
-    <h1 class=>This is a Light/Dark mode theme changer</h1>
+    <h1 class="text-heading">This is a Light/Dark mode theme changer</h1>
+
+   <div class="cotainer">
+   
     <img src="dark.png" class="theme-icon active" id="img-dark" onclick="darkMode()"/>
     <img src="light.png" class="theme-icon" id="img-light" onclick="lightMode()"/>
 
